@@ -5,3 +5,16 @@
 5- the player have to finish all the levels before the time is end
 6- you need to reach max score to win
 7- if the 2 color wrong it will not be visible
+
+When the game begins, the player will choose 1 or 2 player mode.
+When the timer starts, the colors will be shown for a short period of time
+Once they go away, the player will need to use their memory to try and select matching colors.
+When the player clicks on a square, it will reveal the color underneath.
+The player can then select another square.
+When the second square is revealed, it will be checked if the two colors match.
+If they match, the player will get a point.
+If they do not match, the squares will hide again and it will be the other players turn.
+If the first level finish the next level will be harder and less time.
+If you reach to 10 scores the player will win and go to next levels.
+It will be 3 levels fo finish the game.
+It will be more color and similar for next levels you go.

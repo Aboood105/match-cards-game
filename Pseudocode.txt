@@ -1,0 +1,7 @@
+1- how many player will play the game (player 2 is optional)
+2- set up the timer to play
+3- will have more colors for each levels we will go for it
+4- if the 2 color be same it will be visible
+5- the player have to finish all the levels before the time is end
+6- you need to reach max score to win
+7- if the 2 color wrong it will not be visible

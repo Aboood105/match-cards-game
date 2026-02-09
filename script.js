@@ -19,6 +19,10 @@ let imgMaths = [
   `img-html/aa.png`,
   `img-html/33.png`,
   `img-html/44.jpg`,
+  `/img-html/55.png`,
+  `/img-html/66.png`,
+  `/img-html/77.png`,
+  `/img-html/88.jpg`,
 ]
 
 let random = imgMaths[Math.floor(Math.random() * imgMaths.length)]

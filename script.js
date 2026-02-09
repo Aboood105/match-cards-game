@@ -12,7 +12,6 @@ const img = document.querySelectorAll(`.photo`)
 ////////////////////////////////////////
 ///// let
 
-let arraySrc = []
 let timeLeft = 60
 let imgMaths = [
   `img-html/hhh.png`,

@@ -1,9 +1,14 @@
 body {
   background-color: white;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   align-items: center;
 }
+
+h1 {
+  text-align: center;
+}
+
 button {
   height: 70px;
   width: 70px;

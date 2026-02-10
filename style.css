@@ -44,7 +44,7 @@ button {
   position: absolute;
   backface-visibility: hidden;
   border: 1px solid black;
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 .photo .back {

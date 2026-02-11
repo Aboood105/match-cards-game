@@ -2,7 +2,7 @@
 This is my game for project 1 that I will do with GA
 
 
-## by : abdulla
+## by : Abdulla
 
 ## date febrauary 5th, 2026
 
@@ -12,7 +12,7 @@ This is my game for project 1 that I will do with GA
 ![Screenshot](./images/first%20photo.png)
 ![Screenshot](./images/last%20photo.png)
 
-
+[Click here to play my game](https://best-match-cards.surge.sh/)
 
 ### Technologies
 * html

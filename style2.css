@@ -1,0 +1,89 @@
+body {
+  background-color: burlywood;
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+span {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+#resetButton {
+  background-color: orange;
+}
+h1 {
+  text-align: center;
+}
+
+button {
+  height: 75px;
+  width: 75px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+#mainBoard {
+  height: 640px;
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  gap: 20px;
+  padding: 20px;
+  border: 0px solid black;
+  justify-content: center;
+}
+
+.photo {
+  height: 200px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+.photo .back,
+.photo .front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border: 1px solid black;
+  transition: transform 0.5s;
+}
+
+.photo .back {
+  background-color: red;
+}
+
+.photo .front {
+  transform: rotateY(180deg);
+}
+
+.photo.flipped .back {
+  transform: rotateY(180deg);
+}
+
+.photo.flipped .front {
+  transform: rotateY(0deg);
+}

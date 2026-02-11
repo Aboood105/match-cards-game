@@ -45,15 +45,7 @@ button {
 }
 
 #mainBoard {
-  /* height: 400px;
-  width: 1500px;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap; */
   height: 640px;
-  /* width: 1400px; */
   display: grid;
   grid-template-columns: repeat(10, 150px);
   gap: 20px;

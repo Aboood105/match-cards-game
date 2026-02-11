@@ -25,6 +25,9 @@ let imgMaths = [
   `/img-html/tida.png`,
   `/img-html/yusuf.png`,
   `/img-html/sea.png`,
+  `/img-html/robot.png`,
+  `/img-html/anonymous.png`,
+  `/img-html/messi.png`,
 ]
 let turnTheGame = false
 

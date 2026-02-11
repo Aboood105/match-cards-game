@@ -99,6 +99,7 @@ function checkCard() {
     if (count === imgMaths.length) {
       clearInterval(timer)
       time.innerHTML = `<h3> you win </h3> `
+      window.location.href = "/winner.html"
     }
   } else {
     setTimeout(() => {
@@ -119,6 +120,7 @@ function startTimer() {
       clearInterval(timer)
       time.innerHTML = `<h3> Time's up! </h3> `
       turnTheGame = false
+      window.location.href = "/loser.html"
     }
   }, 1000)
 }

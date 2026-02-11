@@ -44,16 +44,7 @@ function startGame() {
 
   let allImg = [...imgMaths, ...imgMaths]
   allImg.random
-  // maybe this
-  // allImg.sort(() => Math.random() - 0.5)
-  // or this
-  // for (let i = allImg.length - 1; i > 0; i--) {
-  //   const j = Math.floor(Math.random() * (i + 1))
-  //   let temp = allImg[i]
-  //   allImg[i] = allImg[j]
-  //   allImg[j] = temp
-  // }
-  // or this
+
   for (let i = 0; i < allImg.length; i++) {
     const j = Math.floor(Math.random() * allImg.length)
     let temp = allImg[i]
@@ -67,7 +58,6 @@ function startGame() {
     card.classList.add("flipped")
 
     const front = document.createElement("img")
-    // front.src = imgMaths[Math.floor(Math.random() * imgMaths.length)]
     front.src = divs
     front.classList.add("front")
 
@@ -93,7 +83,6 @@ function startGame() {
   }, 4000)
 }
 
-// let flippedImg = []
 function flipImg() {
   if (!turnTheGame) return
   if (flippedImg.length === 2 || this.classList.contains(`flipped`)) return
@@ -116,6 +105,7 @@ function checkCard() {
     if (count === imgMaths.length) {
       clearInterval(timer)
       time.innerHTML = `<h3> you win </h3> `
+      window.location.href = "/winner.html"
     }
   } else {
     setTimeout(() => {
@@ -136,6 +126,7 @@ function startTimer() {
       clearInterval(timer)
       time.innerHTML = `<h3> Time's up! </h3> `
       turnTheGame = false
+      window.location.href = "/loser.html"
     }
   }, 1000)
 }

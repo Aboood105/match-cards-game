@@ -24,6 +24,7 @@ let imgMaths = [
   `/img-html/table.jpg`,
   `/img-html/tida.png`,
   `/img-html/yusuf.png`,
+  `/img-html/sea.png`,
 ] //more img
 let turnTheGame = false
 
@@ -34,7 +35,7 @@ function startGame() {
   mainBoard.innerHTML = ``
   flippedImg = []
   count = 0
-  timeLeft = 60
+  timeLeft = 5
   turnTheGame = true
 
   let allImg = [...imgMaths, ...imgMaths]
@@ -132,7 +133,7 @@ function startTimer() {
       time.innerHTML = `<h3> Time's up! </h3> `
       turnTheGame = false
     }
-  }, 500)
+  }, 1000)
 }
 ///////////////////
 // add event

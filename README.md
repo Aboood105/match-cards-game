@@ -9,7 +9,9 @@ This is my game for project 1 that I will do with GA
 ## description
 ***The player have to catch the same photo for before the time is finish to win!!***
 
-![Screenshot](./images/wireframe.png)
+![Screenshot](./images/first%20photo.png)
+![Screenshot](./images/last%20photo.png)
+
 
 
 ### Technologies
@@ -18,7 +20,7 @@ This is my game for project 1 that I will do with GA
 * js
 
 
-- [ ] design html
-- [ ] design css
-- [ ] js function
+- [x] design html
+- [x] design css
+- [x] js function
 

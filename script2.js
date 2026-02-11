@@ -11,16 +11,22 @@ const img = document.querySelectorAll(`.photo`)
 let flippedImg = []
 let count = 0
 let timer
-let timeLeft = 60
+let timeLeft = 90
 let imgMaths = [
   `img-html/barcelona.png`,
+  `img-html/chair.png`,
+  `/img-html/hat.jpg`,
+  `/img-html/headphone.png`,
   `/img-html/laptop.png`,
   `/img-html/Michael.png`,
   `/img-html/phone.png`,
+  `/img-html/phone2.png`,
+  `/img-html/table.jpg`,
   `/img-html/tida.png`,
   `/img-html/yusuf.png`,
   `/img-html/sea.png`,
   `/img-html/robot.png`,
+  `/img-html/anonymous.png`,
   `/img-html/messi.png`,
 ]
 let turnTheGame = false
@@ -33,7 +39,7 @@ function startGame() {
   mainBoard.innerHTML = ``
   flippedImg = []
   count = 0
-  timeLeft = 60
+  timeLeft = 90
   turnTheGame = true
 
   let allImg = [...imgMaths, ...imgMaths]
@@ -46,13 +52,13 @@ function startGame() {
     allImg[j] = temp
   }
 
-  allImg.forEach((imgSrc) => {
+  allImg.forEach((divs) => {
     const card = document.createElement("div")
     card.classList.add("photo")
     card.classList.add("flipped")
 
     const front = document.createElement("img")
-    front.src = imgSrc
+    front.src = divs
     front.classList.add("front")
 
     const back = document.createElement("div")
@@ -74,7 +80,7 @@ function startGame() {
       card.addEventListener("click", flipImg)
     })
     startTimer()
-  }, 3000)
+  }, 4000)
 }
 
 function flipImg() {

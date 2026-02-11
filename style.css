@@ -22,8 +22,9 @@ button {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap; */
+  height: 700px;
   display: grid;
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: repeat(6, 150px);
   gap: 20px;
   padding: 20px;
   border: 2px solid black;

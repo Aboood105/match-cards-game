@@ -13,83 +13,19 @@ let count = 0
 let timer
 let timeLeft = 60
 let imgMaths = [
-  `img-html/hhh.png`,
-  `img-html/aa.png`,
-  `img-html/33.png`,
-  `img-html/44.jpg`,
-  `img-html/55.png`,
-  `img-html/66.png`,
-  `img-html/77.png`,
-  `img-html/88.jpg`,
+  `img-html/barcelona.png`,
+  `img-html/chair.png`,
+  `/img-html/hat.jpg`,
+  `/img-html/headphone.png`,
+  `/img-html/laptop.png`,
+  `/img-html/Michael.png`,
+  `/img-html/phone.png`,
+  `/img-html/phone2.png`,
+  `/img-html/table.jpg`,
+  `/img-html/tida.png`,
+  `/img-html/yusuf.png`,
 ] //more img
-
-// function startGame() {
-//   mainBoard.innerHTML = ``
-//   flippedImg = []
-//   count = 0
-//   timeLeft = 60
-
-//   let allImg = [...imgMaths, ...imgMaths]
-
-//   allImg.random
-//   allImg.sort(() => Math.random() - 0.5)
-
-//   allImg.forEach((divs) => {
-//     const card = document.createElement("div")
-//     card.classList.add("photo")
-//     card.classList.add("flipped")
-
-//     const front = document.createElement("img")
-//     // front.src = imgMaths[Math.floor(Math.random() * imgMaths.length)]
-//     front.src = divs
-//     front.classList.add("front")
-
-//     const back = document.createElement("div")
-//     back.classList.add("back")
-
-//     card.appendChild(back)
-//     card.appendChild(front)
-
-//     card.addEventListener("click", flipImg)
-//     mainBoard.appendChild(card)
-//   })
-//   // 2. WAIT 5 SECONDS: Then flip them back and enable clicking
-//   time.innerHTML = `<h3>Memorize the cards!</h3>`
-
-//   setTimeout(() => {
-//     const allCards = document.querySelectorAll(".photo")
-//     allCards.forEach((card) => {
-//       card.classList.remove("flipped") // Flip them back to hide the image
-//       card.addEventListener("click", flipImg) // ONLY enable clicking after the peek
-//     })
-//     // 3. START GAME: Start the countdown timer only after the peek is over
-//     startTimer()
-//   }, 3000)
-// }
-// img.forEach((divs) => {
-//   const front = document.createElement("img")
-//   front.src = imgMaths[Math.floor(Math.random() * imgMaths.length)]
-//   front.classList.add("front")
-
-//   const back = document.createElement("img")
-//   back.classList.add("back")
-
-//   divs.appendChild(back)
-//   divs.appendChild(front)
-
-//   divs.addEventListener("click", () => {
-//     divs.classList.toggle("flipped")
-//   })
-// })
-
-// let random = imgMaths[Math.floor(Math.random() * imgMaths.length)]
-
-// img.forEach((singleImg) => {
-//   const creatImg1 = document.createElement("img")
-//   creatImg1.src = imgMaths[Math.floor(Math.random() * imgMaths.length)]
-//   creatImg1.classList.add("photo")
-//   singleImg.appendChild(creatImg1)
-// })
+let turnTheGame = false
 
 ////////////////////////////////////
 // function
@@ -99,6 +35,7 @@ function startGame() {
   flippedImg = []
   count = 0
   timeLeft = 60
+  turnTheGame = true
 
   let allImg = [...imgMaths, ...imgMaths]
   allImg.random
@@ -135,7 +72,7 @@ function startGame() {
     card.appendChild(back)
     card.appendChild(front)
 
-    // card.addEventListener("click", flipImg)
+    card.addEventListener("click", flipImg)
     mainBoard.appendChild(card)
   })
 
@@ -150,8 +87,10 @@ function startGame() {
     startTimer()
   }, 3000)
 }
+
 // let flippedImg = []
 function flipImg() {
+  if (!turnTheGame) return
   if (flippedImg.length === 2 || this.classList.contains(`flipped`)) return
   this.classList.add(`flipped`)
   flippedImg.push(this)
@@ -191,23 +130,11 @@ function startTimer() {
     if (timeLeft <= 0) {
       clearInterval(timer)
       time.innerHTML = `<h3> Time's up! </h3> `
+      turnTheGame = false
     }
-  }, 1000)
+  }, 500)
 }
-// startTimer()
-// no need for it ^^^^^
-// function doubleImg() {
-//   for (i = 0; i < imgMaths.length; i++) {
-//     const creatImg = document.createElement("img")
-//     creatImg.src = imgMaths[Math.floor(Math.random() * imgMaths.length)]
-//     creatImg.classList.add(`photo`)
-//     mainBoard.appendChild(creatImg)
-//   }
-// }
-// doubleImg()
-
-// function reset() {
-//   timeLeft = 60
-// }
+///////////////////
+// add event
 resetButton.addEventListener(`click`, startGame)
 startGame()

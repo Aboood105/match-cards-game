@@ -11,7 +11,7 @@ const img = document.querySelectorAll(`.photo`)
 let flippedImg = []
 let count = 0
 let timer
-let timeLeft = 60
+let timeLeft = 90
 let imgMaths = [
   `img-html/barcelona.png`,
   `img-html/chair.png`,
@@ -25,17 +25,18 @@ let imgMaths = [
   `/img-html/tida.png`,
   `/img-html/yusuf.png`,
   `/img-html/sea.png`,
-] //more img
+]
 let turnTheGame = false
 
 ////////////////////////////////////
 // function
 
 function startGame() {
+  clearInterval(timer)
   mainBoard.innerHTML = ``
   flippedImg = []
   count = 0
-  timeLeft = 5
+  timeLeft = 90
   turnTheGame = true
 
   let allImg = [...imgMaths, ...imgMaths]
@@ -86,7 +87,7 @@ function startGame() {
       card.addEventListener("click", flipImg)
     })
     startTimer()
-  }, 3000)
+  }, 4000)
 }
 
 // let flippedImg = []

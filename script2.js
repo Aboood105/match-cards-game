@@ -43,7 +43,6 @@ function startGame() {
   turnTheGame = true
 
   let allImg = [...imgMaths, ...imgMaths]
-  allImg.random
 
   for (let i = 0; i < allImg.length; i++) {
     const j = Math.floor(Math.random() * allImg.length)
